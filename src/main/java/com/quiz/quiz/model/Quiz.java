@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -28,7 +29,7 @@ public class Quiz {
     @Column(name = "title")
     private String title;
     @ManyToMany
-    private List<Questions> questions;
+    private List<Questions> questions = new ArrayList<>();
 
 
     @Override
